@@ -33,6 +33,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('products.index') }}">Product List</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('cashier.index') }}">Cashier</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('reports.index') }}">Transaction Report</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
