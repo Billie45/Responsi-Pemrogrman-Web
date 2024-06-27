@@ -6,7 +6,7 @@
     <form action="{{ route('cashier.checkout') }}" method="POST">
         @csrf
         <table class="table table-bordered">
-            <thead>
+            <thead class="table-primary text-center">
                 <tr>
                     <th>Name</th>
                     <th>Price</th>
@@ -18,10 +18,10 @@
                 @foreach($products as $product)
                 <tr>
                     <td>{{ $product->name }}</td>
-                    <td>{{ $product->price }}</td>
-                    <td>{{ $product->stock }}</td>
+                    <td class="text-end">{{ $product->price }}</td>
+                    <td class="text-end">{{ $product->stock }}</td>
                     <td>
-                        <input type="number" class="form-control" name="products[{{ $product->id }}][quantity]" min="1" max="{{ $product->stock }}">
+                        <input type="number" class="form-control text-end" name="products[{{ $product->id }}][quantity]" min="1" max="{{ $product->stock }}">
                         <input type="hidden" name="products[{{ $product->id }}][id]" value="{{ $product->id }}">
                     </td>
                 </tr>

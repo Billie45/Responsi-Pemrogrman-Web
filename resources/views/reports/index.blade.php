@@ -5,7 +5,7 @@
 <div class="container mt-5">
     <h1>Transaction Report</h1>
     <table class="table table-bordered">
-        <thead>
+        <thead class="table-primary text-center">
             <tr>
                 <th>Time</th>
                 <th>Product</th>
@@ -17,11 +17,11 @@
         <tbody>
             @foreach($transactions as $transaction)
             <tr>
-                <td>{{ $transaction->created_at }}</td>
-                <td>{{ $transaction->product->name }}</td>
-                <td>{{ $transaction->quantity }}</td>
-                <td>{{ $transaction->product->price }}</td>
-                <td>{{ $transaction->quantity * $transaction->product->price }}</td>
+                <td class="text-start">{{ $transaction->created_at }}</td>
+                <td class="text-start">{{ $transaction->product->name }}</td>
+                <td class="text-end">{{ $transaction->quantity }}</td>
+                <td class="text-end">{{ $transaction->product->price }}</td>
+                <td class="text-end">{{ $transaction->quantity * $transaction->product->price }}</td>
             </tr>
             @endforeach
         </tbody>
